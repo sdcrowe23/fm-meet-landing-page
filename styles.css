@@ -7,11 +7,15 @@ Mobile 375px
 
 /* ========== VARIABLES ========== */
 
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap");
+
 :root {
   --primary-color: #4d96a9;
   --secondary-color: #855fb1;
   --title-color: #28283d;
   --copy-color: #87879d;
+  --btn-primary-hover: #71c0d4;
+  --btn-secondary-hover: #b18bdd;
 }
 
 /* ========== BASE ========== */
@@ -28,6 +32,7 @@ html {
   box-sizing: border-box;
   font-size: 10px;
   text-align: center;
+  font-family: "Red Hat Display", sans-serif;
 }
 
 body {
@@ -40,23 +45,37 @@ body {
 /* FONT SIZE & BASE PROPERTIES */
 h1 {
   font-size: 4rem;
+  line-height: 4.4rem;
+  padding-bottom: 2.4rem;
 }
 
 h2 {
   font-size: 3.2rem;
-  font-weight: 900;
+  line-height: 3.6rem;
+  padding-bottom: 3.2rem;
 }
 
 h3 {
   font-size: 1.6rem;
-  font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.4rem;
+  padding-bottom: 2.4rem;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 900;
 }
 
 p {
   font-weight: 500;
   line-height: 2.6rem;
+  padding-bottom: 3.2rem;
+}
+
+a {
+  text-decoration: none;
 }
 /* FONT COLORS */
 
@@ -74,30 +93,185 @@ h3 {
 }
 
 /* FONT MEDIA QUERIES */
-
+/* SCREEN WIDTH OF 768px TO 1440px */
 @media (min-width: 768px) {
   h1 {
     font-size: 4.8rem;
+    line-height: 4.8rem;
   }
 
   h2 {
     font-size: 4rem;
+    line-height: 4.4rem;
   }
 }
 
+/* SCREEN WIDTH OF 768px TO 1440px */
 @media (min-width: 1440px) {
   h1 {
     font-size: 6.4rem;
+    line-height: 6.4rem;
   }
 
   p {
     font-size: 1.8rem;
+    padding-bottom: 3.2rem;
   }
 }
 
-/* ==========  ========== */
+/* ========== VARIOUS ========== */
+
+header {
+  padding: 4.8rem 0 5.4rem 0;
+}
+
+/* CONTAINER */
 
 .content {
   max-width: 54rem;
   margin: 0 auto;
+}
+
+/* COPY */
+
+.copy {
+  padding-bottom: 4.8rem;
+}
+
+/* TIMELINE  */
+
+.timeline {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bar {
+  content: "";
+  display: block;
+  background-color: rgba(135, 135, 157, 0.25);
+  height: 8.4rem;
+  width: 0.1rem;
+}
+
+.num {
+  background-color: #ffffff;
+  border: 1px solid rgba(135, 135, 157, 0.25);
+  padding: 1.5rem 1.9rem;
+  margin-bottom: 6.4rem;
+  border-radius: 2.9rem;
+}
+
+/* IMAGES */
+.imgs {
+  display: grid;
+  max-width: 32.7rem;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 2.5rem;
+  column-gap: 2.4rem;
+  margin: 0 auto 6.4rem auto;
+}
+
+.img {
+  border-radius: 0.8rem;
+  width: 15.1rem;
+  height: 14.3rem;
+}
+
+/* IMAGES MEDIA QUERIES */
+/* SCREEN WIDTH OF 768px TO 1440px */
+
+@media (min-width: 768px) {
+  .imgs {
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: none;
+    margin: 0 auto 8rem auto;
+    column-gap: 1.1rem;
+  }
+
+  .img {
+    width: 16.4rem;
+    height: 15.6rem;
+  }
+}
+
+/* SCREEN WIDTH OF 1440px AND BIGGER */
+
+@media (min-width: 1440px) {
+  .imgs {
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: none;
+    column-gap: 3rem;
+  }
+
+  .img {
+    width: 25.5rem;
+    height: 24.2rem;
+  }
+}
+
+/* ========== BUTTONS ========== */
+
+.hero-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  padding: 1.6rem 2.9rem;
+  border-radius: 2.9rem;
+}
+
+/* DEFAULT STATE */
+
+.btn-primary {
+  background: var(--primary-color);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+  color: #ffffff;
+}
+
+/* HOVERED STATE */
+
+.btn-primary:hover {
+  background: var(--btn-primary-hover);
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background: var(--btn-secondary-hover);
+  color: #ffffff;
+}
+
+/* BUTTON MARGIN */
+
+.btn-primary {
+  margin-bottom: 16px;
+}
+
+.btn-secondary {
+  margin-bottom: 6.4rem;
+}
+
+/* BUTTON MEDIA QUERIES */
+@media (min-width: 768px) {
+  .hero-links {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 6.4rem;
+  }
+
+  .btn-primary {
+    margin: 0 1.6rem 0 0;
+  }
+
+  .btn-secondary {
+    margin: 0;
+  }
 }
