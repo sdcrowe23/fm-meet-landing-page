@@ -37,7 +37,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  padding: 2.4rem;
+  /* padding: 2.4rem; */
 }
 
 /* ========== FONTS ========== */
@@ -125,6 +125,10 @@ header {
   padding: 4.8rem 0 5.4rem 0;
 }
 
+section {
+  padding: 0 2.4rem;
+}
+
 /* CONTAINER */
 
 .content {
@@ -132,6 +136,21 @@ header {
   margin: 0 auto;
 }
 
+.section-2 {
+  background: linear-gradient(rgba(77, 150, 168, 0.5), rgba(77, 150, 168, 0.5)),
+    url(/assets/desktop/image-footer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 9.2rem 0;
+}
+
+.section-2 > h2 {
+  color: #ffffff;
+}
+
+.section-2 > *p {
+  color: #ffffff;
+}
 /* COPY */
 
 .copy {
