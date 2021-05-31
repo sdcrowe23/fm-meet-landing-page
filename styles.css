@@ -1,0 +1,103 @@
+/* 
+MEDIA QUERIES
+Desktop 1440px
+Tablet 768px
+Mobile 375px
+*/
+
+/* ========== VARIABLES ========== */
+
+:root {
+  --primary-color: #4d96a9;
+  --secondary-color: #855fb1;
+  --title-color: #28283d;
+  --copy-color: #87879d;
+}
+
+/* ========== BASE ========== */
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  text-align: center;
+}
+
+body {
+  font-size: 1.6rem;
+  padding: 2.4rem;
+}
+
+/* ========== FONTS ========== */
+
+/* FONT SIZE & BASE PROPERTIES */
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
+
+p {
+  font-weight: 500;
+  line-height: 2.6rem;
+}
+/* FONT COLORS */
+
+p {
+  color: var(--copy-color);
+}
+
+h1,
+h2 {
+  color: var(--title-color);
+}
+
+h3 {
+  color: var(--primary-color);
+}
+
+/* FONT MEDIA QUERIES */
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 4.8rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  h1 {
+    font-size: 6.4rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+  }
+}
+
+/* ==========  ========== */
+
+.content {
+  max-width: 54rem;
+  margin: 0 auto;
+}
