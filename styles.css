@@ -311,7 +311,7 @@ p {
         rgba(77, 150, 168, 0.75),
         rgba(77, 150, 168, 0.75)
       ),
-      url(/assets/tablet/image-footer.jpg) no-repeat center / cover;
+      url(assets/tablet/image-footer.jpg) no-repeat center / cover;
   }
 
   .section-2 h2 {
@@ -388,7 +388,7 @@ p {
         rgba(77, 150, 168, 0.75),
         rgba(77, 150, 168, 0.75)
       ),
-      url(/assets/tablet/image-footer.jpg) no-repeat center / cover;
+      url(assets/tablet/image-footer.jpg) no-repeat center / cover;
     padding: 16rem 0 10.4rem 0;
   }
 
