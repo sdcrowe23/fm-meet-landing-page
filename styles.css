@@ -91,6 +91,7 @@ header {
 }
 
 .hero,
+.section-1,
 .section-2 {
   padding: 0 2.4rem;
 }
@@ -125,6 +126,20 @@ header {
   position: absolute;
   height: 100%;
   width: 100%;
+}
+
+/* ========== SECTION 1 ========== */
+
+.sub-title {
+  margin-bottom: 2.4rem;
+}
+
+.secondary-title {
+  margin-bottom: 3.2rem;
+}
+
+.section-1 .copy {
+  margin-bottom: 6.4rem;
 }
 
 /* ========== SECTION 2 ========== */
