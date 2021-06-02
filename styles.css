@@ -87,7 +87,7 @@ a {
 /* ========== HEADER & SECTIONS ========== */
 
 header {
-  padding: 8rem 0 6.1rem 0;
+  padding: 4.8rem 0 5.4rem 0;
 }
 
 .hero,
@@ -103,7 +103,7 @@ header {
 /* ========== HERO ========== */
 
 .hero .main-title {
-  margin-bottom: 3.4rem;
+  margin-bottom: 2.4rem;
 }
 
 .hero .copy {
@@ -116,7 +116,7 @@ header {
 }
 
 .hero-content {
-  margin-bottom: 11.7rem;
+  margin-bottom: 6rem;
 }
 
 .hero-content:before,
@@ -251,14 +251,16 @@ p {
   color: #ffffff;
 }
 
-/* BUTTON MARGIN */
-
 .btn-primary {
-  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
 }
 
-.btn-secondary {
-  margin-bottom: 6.4rem;
+/* ========== MEDIA QUERIES ========== */
+
+/* ========== TABLET ========== */
+/* SCREEN WIDTH OF 768px TO 1440px */
+
+@media (min-width: 375px) {
 }
 
 /* ========== TABLET ========== */
@@ -341,9 +343,21 @@ p {
 
   /* HERO IMAGES LEFT AND RIGHT */
 
+  header {
+    padding: 8rem 0 6.1rem 0;
+  }
+
   .hero {
     position: relative;
     overflow: hidden;
+  }
+
+  .hero-content {
+    margin-bottom: 11rem;
+  }
+
+  .hero .main-title {
+    margin-bottom: 3.4rem;
   }
 
   .hero-content:before {
