@@ -10,13 +10,14 @@ Mobile 375px
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap");
 
 :root {
-  --primary-color: #855fb1;
-  --secondary-color: #4d96a9;
+  --primary-color: #4d96a9;
+  --secondary-color: #855fb1;
   --title-color: #28283d;
   --copy-color: #87879d;
   --btn-primary-hover: #71c0d4;
   --btn-secondary-hover: #b18bdd;
-  --btn-span: #d9b8ff;
+  --btn-primary-span: #8fe3f9;
+  --btn-secondary-span: #d9b8ff;
 }
 
 /* ========== BASE ========== */
@@ -38,16 +39,17 @@ html {
 
 body {
   font-size: 1.6rem;
+
   /* padding: 2.4rem; */
 }
 
 /* ========== FONTS ========== */
-
 /* FONT SIZE & BASE PROPERTIES */
+
 h1 {
   font-size: 4rem;
   line-height: 4.4rem;
-  padding-bottom: 2.4rem;
+  padding-bottom: 3.4rem;
 }
 
 h2 {
@@ -61,6 +63,12 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0.4rem;
   padding-bottom: 2.4rem;
+  color: var(--primary-color);
+}
+
+h1,
+h2 {
+  color: var(--title-color);
 }
 
 h1,
@@ -73,47 +81,30 @@ p {
   font-weight: 500;
   line-height: 2.6rem;
   padding-bottom: 3.2rem;
+  color: var(--copy-color);
 }
 
 a {
   text-decoration: none;
 }
-/* FONT COLORS */
 
-p {
-  color: var(--copy-color);
+/* ========== HEADER & SECTIONS ========== */
+
+header {
+  padding: 8rem 0 6.1rem 0;
 }
 
-h1,
-h2 {
-  color: var(--title-color);
+section {
+  padding: 0 2.4rem;
 }
-
-h3 {
-  color: var(--secondary-color);
-}
-
-/* ========== CONTENT RELATED ========== */
 
 .content {
   max-width: 54rem;
   margin: 0 auto;
 }
 
-/* COPY */
-
 .copy {
   padding-bottom: 4.8rem;
-}
-
-/* ========== HEADER & SECTION ========== */
-
-header {
-  padding: 4.8rem 0 5.4rem 0;
-}
-
-section {
-  padding: 0 2.4rem;
 }
 
 .section-2 {
@@ -143,6 +134,21 @@ p {
   padding-bottom: 5.6rem;
 }
 
+/* ========== HERO ========== */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content:before,
+.hero-content:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
 /* ========== TIMELINE BAR ========== */
 
 .timeline {
@@ -165,7 +171,7 @@ p {
   padding: 1.5rem 1.9rem;
   margin-bottom: 6.4rem;
   border-radius: 2.9rem;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .num-2 {
@@ -173,6 +179,7 @@ p {
 }
 
 /* ========== IMAGES ========== */
+
 .imgs {
   display: grid;
   max-width: 32.7rem;
@@ -203,8 +210,14 @@ p {
   border-radius: 2.9rem;
 }
 
-.btn-special {
-  color: var(--btn-span);
+.btn-span-1 {
+  color: var(--btn-primary-span);
+  margin-left: 0.2rem;
+}
+
+.btn-span-2 {
+  color: var(--btn-secondary-span);
+  margin-left: 0.2rem;
 }
 
 /* DEFAULT STATE */
@@ -241,7 +254,15 @@ p {
   margin-bottom: 6.4rem;
 }
 
+/* ========== MOBILE ========== */
+/* SCREEN WIDTH OF 375px TO 768px */
+
+/* @media (min-width: 370px) {
+} */
+
+/* ========== TABLET ========== */
 /* SCREEN WIDTH OF 768px TO 1440px */
+
 @media (min-width: 768px) {
   /* FONT MEDIA QUERIES */
   h1 {
@@ -253,6 +274,8 @@ p {
     font-size: 4rem;
     line-height: 4.4rem;
   }
+
+  /* HERO IMAGES LEFT AND RIGHT */
 
   /* BUTTON MEDIA QUERIES */
   .hero-links {
@@ -283,6 +306,14 @@ p {
     height: 15.6rem;
   }
 
+  .section-2 {
+    background: linear-gradient(
+        rgba(77, 150, 168, 0.75),
+        rgba(77, 150, 168, 0.75)
+      ),
+      url(/assets/tablet/image-footer.jpg) no-repeat center / cover;
+  }
+
   .section-2 h2 {
     color: #fff;
     padding-bottom: 3.2rem;
@@ -296,7 +327,9 @@ p {
   }
 }
 
+/* ========== DESKTOP ========== */
 /* SCREEN WIDTH OF 1440px AND BIGGER */
+
 @media (min-width: 1440px) {
   /* FONT MEDIA QUERIES */
   h1 {
@@ -307,6 +340,31 @@ p {
   p {
     font-size: 1.8rem;
     padding-bottom: 3.2rem;
+  }
+
+  /* HERO IMAGES LEFT AND RIGHT */
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-content:before {
+    background: url(assets/desktop/image-hero-left.png);
+    background-repeat: no-repeat;
+    transform: translateX(-6%);
+    max-width: 41.4rem;
+    left: 0;
+    top: 0;
+  }
+
+  .hero-content:after {
+    background: url(assets/desktop/image-hero-right.png);
+    background-repeat: no-repeat;
+    transform: translateX(6%);
+    max-width: 41.4rem;
+    right: 0;
+    top: 0;
   }
 
   /* IMAGES MEDIA QUERIES */
@@ -323,11 +381,18 @@ p {
   }
 
   /* SECTION MEDIA QUERIES */
+  /* SECTION 2 BACKGROUND IMAGE */
 
   .section-2 {
+    background: linear-gradient(
+        rgba(77, 150, 168, 0.75),
+        rgba(77, 150, 168, 0.75)
+      ),
+      url(/assets/tablet/image-footer.jpg) no-repeat center / cover;
     padding: 16rem 0 10.4rem 0;
   }
 
+  /* SECTION 2 CONTENT  */
   .section-2 div {
     max-width: 111rem;
     display: grid;
